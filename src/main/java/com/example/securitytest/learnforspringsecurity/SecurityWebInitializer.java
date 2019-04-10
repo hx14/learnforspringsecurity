@@ -1,4 +1,4 @@
-package com.example.securitytest.hx;
+package com.example.securitytest.learnforspringsecurity;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
