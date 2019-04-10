@@ -1,4 +1,4 @@
-package com.example.securitytest.learnforspringsecurity;
+package com.example.securitytest.spittr.config;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

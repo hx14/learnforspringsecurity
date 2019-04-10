@@ -1,4 +1,4 @@
-package com.example.securitytest.learnforspringsecurity;
+package com.example.securitytest.spittr.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,15 +11,6 @@ import javax.sql.DataSource;
 
 /**
  * Created by hx on 2019-04-09.
- * <p>
- * 第一种方法
- * 显式启用
- * <p>
- * 第一种方法
- * 显式启用
- * <p>
- * 第二种方法
- * 密码加密，使用数据库
  */
 
 /**
@@ -81,6 +72,29 @@ import javax.sql.DataSource;
  * 第三种方法
  * LDAP认证
  */
+//@Configuration
+//@EnableWebMvc //启用Web安全功能使用EnableWebSecurity, 如果是MVC，则使用如左,EnableWebMvcSecurity过时
+//public class SecurityConfig extends WebSecurityConfigurerAdapter {// 用于扩展 WebSecurityConfigurerAdapter
+//    @Autowired
+//    DataSource dataSource;// 用于sql,自动装配,需要在pom.xml中配置【mybatis-spring-boot-starter】
+//
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.ldapAuthentication()
+//                .userSearchBase("ou=people")// userSearchBase提供查找用户的基础查询
+//                .userSearchFilter("(uid={0})")
+//                .groupSearchBase("ou=groups")// groupSearchBase提供查找组的基础查询
+//                .groupSearchFilter("member={0}")
+//                .passwordCompare()// 通过密码比对进行认证
+//                .passwordEncoder(new BCryptPasswordEncoder())
+//                .passwordAttribute("passcode");
+//    }
+//}
+
+/**
+ * 第四种方法
+ * LDAP认证,修改端口
+ */
 @Configuration
 @EnableWebMvc //启用Web安全功能使用EnableWebSecurity, 如果是MVC，则使用如左,EnableWebMvcSecurity过时
 public class SecurityConfig extends WebSecurityConfigurerAdapter {// 用于扩展 WebSecurityConfigurerAdapter
@@ -94,8 +108,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {// 用于扩�
                 .userSearchFilter("(uid={0})")
                 .groupSearchBase("ou=groups")// groupSearchBase提供查找组的基础查询
                 .groupSearchFilter("member={0}")
-                .passwordCompare()// 通过密码比对进行认证
-                .passwordEncoder(new BCryptPasswordEncoder())
-                .passwordAttribute("passcode");
+                .contextSource()// 默认ldap认证假设监听本机33389端口,但是可用contextSource进行配置
+//                .url("ldap://habuma.com:389/dc=habuma,dc=com");
+                .root("dc=habuma,dc=com")// 如果没有现成的LDAP服务器,可直接使用【.root("dc=habuma,dc=com")】
+                .ldif("classpath:users.ldif");// 指定LDIF文件
     }
 }
