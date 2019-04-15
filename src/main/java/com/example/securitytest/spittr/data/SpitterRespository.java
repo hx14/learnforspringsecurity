@@ -7,4 +7,5 @@ import com.example.securitytest.spittr.Spitter;
  */
 public interface SpitterRespository {
     Spitter findByUsername(String username);
+    void save(Spitter spitter);
 }
