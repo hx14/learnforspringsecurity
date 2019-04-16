@@ -1,7 +1,7 @@
 package com.example.securitytest.spittr.service;
 
-import com.example.securitytest.spittr.Spitter;
-import com.example.securitytest.spittr.Spittle;
+import com.example.securitytest.spittr.domain.Spitter;
+import com.example.securitytest.spittr.domain.Spittle;
 
 import java.util.ArrayList;
 import java.util.List;

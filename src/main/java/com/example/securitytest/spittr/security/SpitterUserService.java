@@ -1,9 +1,7 @@
 package com.example.securitytest.spittr.security;
 
-import com.example.securitytest.spittr.Spitter;
+import com.example.securitytest.spittr.domain.Spitter;
 import com.example.securitytest.spittr.data.SpitterRespository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

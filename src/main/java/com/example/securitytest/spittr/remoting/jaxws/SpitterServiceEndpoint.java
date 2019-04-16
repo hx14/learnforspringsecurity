@@ -1,7 +1,7 @@
 package com.example.securitytest.spittr.remoting.jaxws;
 
-import com.example.securitytest.spittr.Spitter;
-import com.example.securitytest.spittr.Spittle;
+import com.example.securitytest.spittr.domain.Spitter;
+import com.example.securitytest.spittr.domain.Spittle;
 import com.example.securitytest.spittr.service.SpitterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

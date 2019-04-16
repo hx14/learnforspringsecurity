@@ -1,20 +1,21 @@
-package com.example.securitytest.spittr;
+package com.example.securitytest.spittr.domain;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by hx on 2019-04-15.
  */
-public class Spittle {
+public class Spittle implements Serializable {
     private final Long id;
     private final String message;
     private final Date time;
     private Double laititude;
     private Double longitude;
-
+    private String text;
     public Spittle(String message, Date time) {
         this(message, time, null, null);
     }
@@ -45,6 +46,10 @@ public class Spittle {
 
     public Double getLongitude() {
         return longitude;
+    }
+
+    public String getText() {
+        return text;
     }
 
     @Override

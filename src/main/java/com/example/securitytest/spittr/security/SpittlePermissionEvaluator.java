@@ -1,6 +1,6 @@
 package com.example.securitytest.spittr.security;
 
-import com.example.securitytest.spittr.Spittle;
+import com.example.securitytest.spittr.domain.Spittle;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;

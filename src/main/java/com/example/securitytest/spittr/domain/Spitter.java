@@ -1,4 +1,4 @@
-package com.example.securitytest.spittr;
+package com.example.securitytest.spittr.domain;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -21,6 +21,9 @@ public class Spitter {
     @NotNull
     @Size(min = 2,max = 30, message = "{lastName.size}")
     private String lastName;
+    @NotNull
+    @Size(min = 4,max = 60, message = "{fullName.size}")
+    private String fullName;
     @NotNull
     @Size(message = "{email.valid}")
     private String email;
@@ -51,6 +54,14 @@ public class Spitter {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public void setFirstName(String firstName) {

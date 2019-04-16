@@ -1,6 +1,6 @@
 package com.example.securitytest.spittr.web;
 
-import com.example.securitytest.spittr.Spitter;
+import com.example.securitytest.spittr.domain.Spitter;
 import com.example.securitytest.spittr.data.SpitterRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
