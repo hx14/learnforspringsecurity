@@ -2,6 +2,7 @@ package com.example.securitytest.spittr.domain;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * Created by hx on 2019-04-10.

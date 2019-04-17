@@ -16,6 +16,7 @@ public class Spittle implements Serializable {
     private Double laititude;
     private Double longitude;
     private String text;
+
     public Spittle(String message, Date time) {
         this(message, time, null, null);
     }
@@ -26,6 +27,13 @@ public class Spittle implements Serializable {
         this.time = time;
         this.longitude = longitude;
         this.laititude = laititude;
+    }
+
+    public Spittle(String message, String text, Date time) {
+        this.id = null;
+        this.message = message;
+        this.text = text;
+        this.time = time;
     }
 
     public Long getId() {
@@ -61,6 +69,7 @@ public class Spittle implements Serializable {
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this, "id", "time");
     }
+
     //
     public Spitter getSpitter() {
         return getSpitter();

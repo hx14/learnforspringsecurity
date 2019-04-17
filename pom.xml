@@ -65,10 +65,10 @@
             <version>1.1-rev-1</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>javax.jms</groupId>-->
-            <!--<artifactId>com.springsource.javax.jms</artifactId>-->
-            <!--<version>1.1.0</version>-->
-            <!--<scope>provided</scope>-->
+        <!--<groupId>javax.jms</groupId>-->
+        <!--<artifactId>com.springsource.javax.jms</artifactId>-->
+        <!--<version>1.1.0</version>-->
+        <!--<scope>provided</scope>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -90,7 +90,29 @@
             <artifactId>spring-rabbit</artifactId>
             <version>1.2.0.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.java-websocket</groupId>
+            <artifactId>Java-WebSocket</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

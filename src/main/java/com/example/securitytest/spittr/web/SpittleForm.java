@@ -21,6 +21,11 @@ public class SpittleForm {
     @Min(-90)
     @Max(90)
     private Double latitude;
+    private String text;
+
+    public String getText() {
+        return text;
+    }
 
     public String getMessage() {
         return message;
